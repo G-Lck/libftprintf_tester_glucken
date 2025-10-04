@@ -3,16 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   test_dec.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glucken <glucken@ent.42lausanne.ch>        +#+  +:+       +#+        */
+/*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:28:23 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/02 14:46:48 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/04 18:33:30 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "./libftprintf_tester_glucken.h"
+
 void    test_dec(int d)
 {
-    printf("%d", d);
-    printf(" --> ");
-    printf("%d\n", d);
+	int nb_result;
+	int nb_expected;
+
+	nb_result = ft_printf("%d", d);
+	printf(" --> ");
+	nb_expected = printf("%d", d);
+	compare_int(nb_result, nb_expected);
+	printf("\n");
 }

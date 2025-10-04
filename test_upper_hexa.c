@@ -3,16 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   test_upper_hexa.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glucken <glucken@ent.42lausanne.ch>        +#+  +:+       +#+        */
+/*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:30:36 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/02 14:47:18 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/04 18:34:11 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "./libftprintf_tester_glucken.h"
+
 void    test_upper_hexa( unsigned int x)
 {
-    printf("%X", x);
-    printf(" --> ");
-    printf("%X\n", x);
+	int nb_result;
+	int nb_expected;
+
+	nb_result = ft_printf("%X", x);
+	printf(" --> ");
+	nb_expected = printf("%X", x);
+	compare_int(nb_result, nb_expected);
+	printf("\n");
 }

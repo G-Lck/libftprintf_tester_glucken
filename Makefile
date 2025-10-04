@@ -1,32 +1,51 @@
+# Nom de l'exécutable
 NAME = tests
 
-SRCS = main.c
+# Fichiers sources
+SRCS = main.c \
+	compare_int.c \
+	test_char.c \
+	test_dec.c \
+	test_int.c \
+	test_lower_hexa.c \
+	test_percent.c \
+	test_pointer.c \
+	test_string.c \
+	test_u_dec.c \
+	test_upper_hexa.c
 
+# Fichiers objets
 OBJS = $(SRCS:.c=.o)
 
-# Path to ft_printf to change
-FT_PRINTF_DIR = /home/glucken/Desktop/42/printf_wait
+# Path vers ta libftprintf
+FT_PRINTF_DIR = /mnt/c/Users/41779/Desktop/42/libftprintf_wait
 FT_PRINTF = $(FT_PRINTF_DIR)/libftprintf.a
 
+# Compilateur et flags
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I$(FT_PRINTF_DIR)
 
-all: $(FT_PRINTF) $(NAME)
+# Règle principale
+all: $(NAME)
 
-$(NAME): $(OBJS) $(FT_PRINTF)
-	$(CC) $(CFLAGS) $(OBJS) -L$(FT_PRINTF_DIR) -libftprintf -o $(NAME)
+# Compilation de l'exécutable
+# 👇 Ici, on lie directement avec la lib (pas besoin de -l ni -L)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(FT_PRINTF) -o $(NAME)
 
-$(FT_PRINTF):
-	$(MAKE) -C $(FT_PRINTF_DIR)
+# Compilation des .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
+# Nettoyage des objets
 clean:
 	rm -f $(OBJS)
-	$(MAKE) -C $(FT_PRINTF_DIR) clean
 
+# Nettoyage complet
 fclean: clean
 	rm -f $(NAME)
-	$(MAKE) -C $(FT_PRINTF_DIR) fclean
 
+# Rebuild complet
 re: fclean all
 
 .PHONY: all clean fclean re
