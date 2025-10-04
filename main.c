@@ -6,7 +6,7 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:45:04 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/04 18:33:17 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/04 19:41:48 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main()
 	printf("int tests\n");
 	test_int(0);
 	test_int(740);
-	test_int(-13);
+	test_int(-7400);
 	test_int(INT_MIN);
 	test_int(INT_MAX);
 
@@ -43,7 +43,7 @@ int main()
 	printf("lower hexa tests\n");
 	test_lower_hexa(0);
 	test_lower_hexa(740);
-	test_lower_hexa(UINT_MAX);
+	test_lower_hexa(2147483648);
 
 	// test upper hexa
 	printf("upper hexa tests\n");
@@ -70,4 +70,10 @@ int main()
 	test_string("%and?");
 	test_string("\0");
 
+	// test u dec
+	printf("unsigned int tests\n");
+	test_u_dec(0);
+	test_u_dec(74);
+	test_u_dec(INT_MAX);
+	test_u_dec(UINT_MAX);
 }

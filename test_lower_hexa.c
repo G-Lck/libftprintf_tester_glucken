@@ -6,13 +6,13 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:30:36 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/04 18:33:42 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/04 19:41:59 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libftprintf_tester_glucken.h"
 
-void    test_lower_hexa( unsigned int x)
+void    test_lower_hexa(unsigned int x)
 {
 	int nb_result;
 	int nb_expected;
