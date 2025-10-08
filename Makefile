@@ -6,6 +6,7 @@ SRCS = main.c \
 	compare_int.c \
 	test_char.c \
 	test_dec.c \
+	test_flags.c \
 	test_int.c \
 	test_lower_hexa.c \
 	test_percent.c \

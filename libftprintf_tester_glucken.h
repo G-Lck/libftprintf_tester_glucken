@@ -14,6 +14,7 @@ void	compare_int(int nb_result, int nb_expected);
 void    test_char(char c);
 void    test_int(int i);
 void    test_dec(int d);
+void	test_flags(void);
 void    test_lower_hexa( unsigned int x);
 void    test_percent(void);
 void    test_pointer(void* p);
