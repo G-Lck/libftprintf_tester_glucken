@@ -6,7 +6,7 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:30:36 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/04 19:41:59 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/08 22:35:03 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,4 @@ void    test_lower_hexa(unsigned int x)
 	printf(" --> ");
 	nb_expected = printf("%x", x);
 	compare_int(nb_result, nb_expected);
-	printf("\n");
 }

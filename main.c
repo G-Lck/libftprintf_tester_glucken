@@ -6,7 +6,7 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:45:04 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/04 19:41:48 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/08 22:38:24 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int main()
 {
-	// tests who should work
-
 	// char
 	printf("char tests\n");
 	test_char('a');
@@ -24,7 +22,7 @@ int main()
 	test_char(0);
 
 	// decimal
-	printf("dec tests\n");
+	printf("\ndec tests\n");
 	test_dec(0);
 	test_dec(740);
 	test_dec(-13);
@@ -32,7 +30,7 @@ int main()
 	test_dec(INT_MAX);
 
 	// int
-	printf("int tests\n");
+	printf("\nint tests\n");
 	test_int(0);
 	test_int(740);
 	test_int(-7400);
@@ -40,38 +38,39 @@ int main()
 	test_int(INT_MAX);
 
 	// test lower hexa
-	printf("lower hexa tests\n");
+	printf("\nlower hexa tests\n");
 	test_lower_hexa(0);
 	test_lower_hexa(740);
-	test_lower_hexa(2147483648);
+	test_lower_hexa(UINT_MAX);
 
 	// test upper hexa
-	printf("upper hexa tests\n");
+	printf("\nupper hexa tests\n");
 	test_upper_hexa(0);
 	test_upper_hexa(740);
 	test_upper_hexa(UINT_MAX);
 
 	// test percent
-	printf("percent tests\n");
+	printf("\npercent tests\n");
 	test_percent();
 
 	// test pointer
-	printf("pointer tests\n");
+	printf("\npointer tests\n");
 	char    *s1;
 	s1 = "Hi";
 	test_pointer(&s1);
 	test_pointer(NULL);
 
 	// test string
-	printf("string tests\n");
+	printf("\nstring tests\n");
 	test_string("Hi you");
 	test_string("Hi\nyou");
 	test_string("");
 	test_string("%and?");
 	test_string("\0");
+	test_string(NULL);
 
 	// test u dec
-	printf("unsigned int tests\n");
+	printf("\nunsigned int tests\n");
 	test_u_dec(0);
 	test_u_dec(74);
 	test_u_dec(INT_MAX);

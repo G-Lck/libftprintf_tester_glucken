@@ -6,7 +6,7 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:30:36 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/04 18:33:24 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/08 22:34:51 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,4 @@ void    test_char(char c)
 	printf(" --> ");
 	nb_expected = printf("%c", c);
 	compare_int(nb_result, nb_expected);
-	printf("\n");
 }

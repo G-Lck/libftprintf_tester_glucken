@@ -6,7 +6,7 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:28:23 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/04 18:46:27 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/08 22:33:33 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,4 @@ void    test_int(int i)
 	printf(" --> ");
 	nb_expected = printf("%i", i);
 	compare_int(nb_result, nb_expected);
-	printf("nb_result is: %i and nb_expected is: %i", nb_result, nb_expected);
-	printf("\n");
 }
