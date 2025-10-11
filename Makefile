@@ -19,7 +19,7 @@ SRCS = main.c \
 OBJS = $(SRCS:.c=.o)
 
 # Path vers ta libftprintf
-FT_PRINTF_DIR = /mnt/c/Users/41779/Desktop/42/libftprintf_wait
+FT_PRINTF_DIR = /mnt/c/Users/41779/Desktop/42/libftprintf
 FT_PRINTF = $(FT_PRINTF_DIR)/libftprintf.a
 
 # Compilateur et flags

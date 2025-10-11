@@ -14,10 +14,39 @@
 
 void	test_flags()
 {
-	printf("le flag +: %+i, %+d\n", 3, 3);
-	printf("le.flag.' ':.% i,.% d\n", 3, -3);
-	printf("le flag #: %#x, %#X\n", 6, 6);
-	printf("le flag 0: %05i   \n", 2);
-	printf("le flag .: %.i je comprend pas\n", 7);
-	printf("le flag -: %-i   \n", 88);
+	int nb_result;
+	int nb_expected;
+
+	// + tests //
+	nb_result = ft_printf("%+i, %+i", 3, -3);
+	printf(" --> ");
+	nb_expected = printf("%+i, %+i", 3, -3);
+	compare_int(nb_result, nb_expected);
+
+	nb_result = ft_printf("%+d, %+d", 3, -3);
+	printf(" --> ");
+	nb_expected = printf("%+d, %+d", 3, -3);
+	compare_int(nb_result, nb_expected);
+
+	// tests # //
+	nb_result = ft_printf("%#x", 3);
+	printf(" --> ");
+	nb_expected = printf("%#x", 3);
+	compare_int(nb_result, nb_expected);
+
+	nb_result = ft_printf("%#X", 3);
+	printf(" --> ");
+	nb_expected = printf("%#X", 3);
+	compare_int(nb_result, nb_expected);
+
+	// space tests //
+	nb_result = ft_printf("% i, % i", 3, -3);
+	printf(" --> ");
+	nb_expected = printf("% i, % i", 3, -3);
+	compare_int(nb_result, nb_expected);
+
+	nb_result = ft_printf("% d, % d", 3, -3);
+	printf(" --> ");
+	nb_expected = printf("% d, % d", 3, -3);
+	compare_int(nb_result, nb_expected);
 }

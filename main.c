@@ -6,7 +6,7 @@
 /*   By: glucken <glucken@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:45:04 by glucken           #+#    #+#             */
-/*   Updated: 2025/10/08 23:16:15 by glucken          ###   ########.fr       */
+/*   Updated: 2025/10/11 14:28:55 by glucken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ int main()
 	test_u_dec(UINT_MAX);
 
 	//flags
+	printf("\nflags tests\n");
 	test_flags();
 }
